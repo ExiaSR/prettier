@@ -21,7 +21,7 @@ ARG MODULE_VERSION=1.17.0
 
 RUN set -x && \
     apk add --no-cache nodejs=${NODEJS_VERSION} nodejs-npm=${NODEJS_VERSION} && \
-    npm install -g prettier@${MODULE_VERSION} && \
+    npm install -g prettier@${MODULE_VERSION} prettier-plugin-java@latest && \
     npm cache clean --force && \
     apk del nodejs-npm
 
